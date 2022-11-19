@@ -1,0 +1,24 @@
+from turtle import Turtle,Screen
+import turtle
+import random
+turtle.colormode(255)
+mr_tutrle = Turtle()
+turtle.mode("standard")
+# colors = ["red","blue","green","orange","olive","yellow","pink","purple","cyan", "brown", "orange","black"]
+
+
+# direction = [0,90,180,270] 
+while True:
+    mr_tutrle.speed(0)
+    red = random.randint(0,255)
+    blue = random.randint(0,255)
+    green = random.randint(0,255)
+    # mr_tutrle.pen(pensize=10)
+    mr_tutrle.color((red,blue,green))
+    mr_tutrle.circle(100)
+    mr_tutrle.right(10)
+    if mr_tutrle.heading() == 0:
+        break
+
+screen = Screen()
+screen.exitonclick()
