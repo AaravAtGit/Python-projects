@@ -1,0 +1,5 @@
+Use W,A,S,D to move
+
+or the arrow keys
+
+that's it lol
