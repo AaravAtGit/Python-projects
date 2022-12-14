@@ -6,16 +6,16 @@ import smtplib
 
 
 
-key = "hglqqxyiojlzrlrr"
-email = "aaravshishodia5029@gmail.com"
-send = "aarav54897@gmail.com"
+key = "your app pass"
+email = "email"
+send = "email to send on "
 
 header = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
-    "Accept-Language": "en-US,en;q=0.9"
+    "User-Agent": "device headers",
+    "Accept-Language": "device headers"
 }
 
-link = "https://www.amazon.in/Intel-i7-3770-Processor-Turbo-3-90GHz/dp/B09PMLW3ZZ/ref=sr_1_4?crid=3V6HR7LRK0PMY&keywords=i7&qid=1654321729&s=computers&sprefix=i7%2Ccomputers%2C1499&sr=1-4"
+link = "link of the thing you want to keep an eye on"
 r = requests.get(link, headers=header)
 html = r.text
 # print(html)
@@ -33,7 +33,7 @@ price = int(price)
 
 title = soup.find(id="productTitle").get_text().strip()
 
-BUY_PRICE = 4500
+BUY_PRICE = "your buy price"
 
 if price < BUY_PRICE:
     message = f"{title} is now {price}"
