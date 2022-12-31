@@ -2,8 +2,8 @@ from flask import Flask, render_template,request
 import requests
 import smtplib
 
-gmail = "aaravshishodia5029@gmail.com"
-email_password = "nnjmhxpehmqylpte"
+gmail = "mail"
+email_password = "pass"
 
 posts = requests.get("https://api.npoint.io/eb8c008084279504fc66").json()
 
@@ -34,7 +34,7 @@ def send_email(name, email, phone, message):
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(gmail, email_password)
-        connection.sendmail(gmail,"ssshishodia@gmail.com", email_message)
+        connection.sendmail(gmail,"another mail", email_message)
 
 @app.route("/contact", methods=["GET","POST"])
 def contact():
